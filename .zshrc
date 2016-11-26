@@ -128,3 +128,7 @@ zle -N peco-select-history
 bindkey '^r' peco-select-history
 
 source ~/.tmuxinator.zsh
+
+# setting golang
+export PATH=/usr/local/go/bin:$PATH
+export GOPATH=$HOME/go
