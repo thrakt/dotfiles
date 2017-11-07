@@ -91,7 +91,7 @@ fi
 
 # Then, source plugins and add commands to $PATH
 # zplug load --verbose
-zplub load
+zplug load
 
 eval "$(rbenv init -)"
 export PATH=$HOME/.nodebrew/current/bin:$PATH
