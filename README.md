@@ -2,18 +2,21 @@
 
 # install
 
+* download and apply http://ethanschoonover.com/solarized
 * change shell to zsh
 * install homebrew
-* `brew install zplug`
+* install zplug by curl https://github.com/zplug/zplug
 * `brew install python`
-* `python -m pip install pip`
+* make /usr/local/bin/python and pip
 * `pip install powerline-status`
+* https://github.com/powerline/fonts
 * `brew install peco`
 * `brew install reattach-to-user-namespace`
-* install tmux
-* install rbenv
-* install mux
-* install tpm
+* `brew install tmux`
+* `brew install rbenv ruby-build`
+* set ruby version to latest
+* `gem install tmuxinator`
+* https://github.com/tmux-plugins/tpm
 
 # update
 
