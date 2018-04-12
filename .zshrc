@@ -131,5 +131,7 @@ bindkey '^r' peco-select-history
 source ~/.tmuxinator.zsh
 
 # setting golang
-export PATH=/usr/local/go/bin:$PATH
+export PATH=/usr/local/go/bin:$PATH:$HOME/scripts
 export GOPATH=$HOME/go
+
+source ~/.zshrc_local

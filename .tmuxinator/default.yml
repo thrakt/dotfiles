@@ -35,12 +35,6 @@ windows:
       layout: 568b,270x72,0,0{135x72,0,0,0,134x72,136,0[134x21,136,0,1,134x22,136,22,2,134x27,136,45,3]} 
       panes:
         - p1:
-          - cd ~/workspace/cycle
         - p2:
-          - cd ~/workspace/cycle
-          - npm run watch
         - p3:
-          - cd ~/workspace/cycle
-          - bundle exec rails server
         - p4:
-          - cd ~/workspace/cycle
