@@ -108,9 +108,23 @@ setopt hist_reduce_blanks
 setopt hist_save_no_dups
 setopt hist_no_store
 
-# powerline
-powerline-daemon -q
-source /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
+# powerline-go
+function powerline_precmd() {
+    eval "$($GOPATH/bin/powerline-go -error $? -shell zsh -eval -modules venv,cwd,jobs -modules-right exit,gitlite)"
+}
+
+function install_powerline_precmd() {
+  for s in "${precmd_functions[@]}"; do
+    if [ "$s" = "powerline_precmd" ]; then
+      return
+    fi
+  done
+  precmd_functions+=(powerline_precmd)
+}
+
+if [ "$TERM" != "linux" ]; then
+    install_powerline_precmd
+fi
 
 # peco
 function peco-select-history() {
@@ -128,10 +142,12 @@ zle -N peco-select-history
 
 bindkey '^r' peco-select-history
 
+# tmux
+export TMUX_TMPDIR=/tmp
 source ~/.tmuxinator.zsh
 
 # setting golang
-export PATH=/usr/local/go/bin:$PATH:$HOME/scripts
+export PATH=$HOME/.local/bin:/usr/local/go/bin:$PATH:$HOME/scripts
 export GOPATH=$HOME/go
 
 source ~/.zshrc_local
