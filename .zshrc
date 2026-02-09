@@ -20,11 +20,11 @@ zplug "k4rthik/git-cal", as:command, frozen:1
 
 # Grab binaries from GitHub Releases
 # and rename with the "rename-to:" tag
-zplug "junegunn/fzf-bin", \
-    from:gh-r, \
-    as:command, \
-    rename-to:fzf, \
-    use:"*darwin*amd64*"
+# zplug "junegunn/fzf-bin", \
+#     from:gh-r, \
+#     as:command, \
+#     rename-to:fzf, \
+#     use:"*darwin*amd64*"
 
 # Supports oh-my-zsh plugins and the like
 zplug "plugins/git",   from:oh-my-zsh
@@ -64,12 +64,12 @@ zplug "b4b4r07/hello_bitbucket", \
 
 # Group dependencies
 # Load "emoji-cli" if "jq" is installed in this example
-zplug "stedolan/jq", \
-    from:gh-r, \
-    as:command, \
-    rename-to:jq
-zplug "b4b4r07/emoji-cli", \
-    on:"stedolan/jq"
+# zplug "stedolan/jq", \
+#     from:gh-r, \
+#     as:command, \
+#     rename-to:jq
+# zplug "b4b4r07/emoji-cli", \
+#     on:"stedolan/jq"
 # Note: To specify the order in which packages should be loaded, use the nice
 #       tag described in the next section
 
