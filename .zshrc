@@ -144,7 +144,7 @@ bindkey '^r' peco-select-history
 
 # tmux
 export TMUX_TMPDIR=/tmp
-source ~/.tmuxinator.zsh
+# source ~/.tmuxinator.zsh
 
 # setting golang
 export PATH=$HOME/.local/bin:/usr/local/go/bin:$PATH:$HOME/scripts
