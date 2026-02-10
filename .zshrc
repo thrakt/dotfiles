@@ -150,4 +150,7 @@ export TMUX_TMPDIR=/tmp
 export PATH=$HOME/.local/bin:/usr/local/go/bin:$PATH:$HOME/scripts
 export GOPATH=$HOME/go
 
+# asdf
+. "$(brew --prefix asdf)/libexec/asdf.sh"
+
 source ~/.zshrc_local
