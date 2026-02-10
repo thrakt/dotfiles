@@ -1,0 +1,23 @@
+[general]
+import = [
+  "~/.config/alacritty/themes/themes/solarized_osaka.toml"
+]
+
+[window]
+startup_mode = "Maximized"
+
+[font]
+normal = { family = "Noto Mono for Powerline" }
+bold = { family = "Noto Mono for Powerline" }
+italic = { family = "Noto Mono for Powerline" }
+bold_italic = { family = "Noto Mono for Powerline" }
+#draw_bold_text_with_bright_colors = true
+
+[[keyboard.bindings]]
+key = "Return"
+mods = "Shift"
+chars = "\u001b\r"
+
+
+[terminal]
+shell = { program = "/opt/homebrew/bin/fish", args = ["--login","--init-command","eval \"$(/opt/homebrew/bin/brew shellenv)\"; tmux attach || ~/.rbenv/shims/tmuxinator default"] }
