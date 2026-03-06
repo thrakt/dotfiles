@@ -93,9 +93,6 @@ fi
 # zplug load --verbose
 zplug load
 
-eval "$(rbenv init -)"
-export PATH=$HOME/.nodebrew/current/bin:$PATH
-
 # history
 export HISTFILE=${HOME}/.zhistory
 export HISTSIZE=1000
@@ -151,6 +148,6 @@ export PATH=$HOME/.local/bin:/usr/local/go/bin:$PATH:$HOME/scripts
 export GOPATH=$HOME/go
 
 # asdf
-. "$(brew --prefix asdf)/libexec/asdf.sh"
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
 
 source ~/.zshrc_local
