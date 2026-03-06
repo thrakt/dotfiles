@@ -20,4 +20,4 @@ chars = "\u001b\r"
 
 
 [terminal]
-shell = { program = "/opt/homebrew/bin/fish", args = ["--login","--init-command","eval \"$(/opt/homebrew/bin/brew shellenv)\"; tmux attach || ~/.rbenv/shims/tmuxinator default"] }
+shell = { program = "/opt/homebrew/bin/fish", args = ["--login","--init-command","eval \"$(/opt/homebrew/bin/brew shellenv)\"; tmux attach || ~/.asdf/shims/tmuxinator default"] }
